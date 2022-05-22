@@ -126,3 +126,15 @@ async function getQuote() {
     }
   }
 }
+
+// tweet generated quote
+const quoteEl = document.getElementById("quote");
+const authorEl = document.getElementById("author");
+const twitterBtn = document.querySelector(".twitter-button");
+
+twitterBtn.addEventListener("click", function () {
+  const tweet =
+    "https://twitter.com/intent/tweet?text=" +
+    `"${quoteEl.textContent}" - ${authorEl.textContent}`;
+  window.open(tweet, "_blank").focus();
+});

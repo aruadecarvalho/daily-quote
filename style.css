@@ -105,6 +105,11 @@ body {
   color: var(--txtColor);
 }
 
+.twitter-button:hover,
+.btn-new-quote:hover {
+  cursor: pointer;
+}
+
 .loader {
   position: absolute;
   border: 0.8rem solid #f3f3f3;
