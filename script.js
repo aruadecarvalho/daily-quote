@@ -2,7 +2,7 @@
 const img = document.querySelector(".bg-img");
 
 const intFrameWidth = window.innerWidth;
-console.log(intFrameWidth);
+// console.log(intFrameWidth);
 if (intFrameWidth <= 832) {
   img.src = src = "https://picsum.photos/600/700";
 } else if (intFrameWidth <= 470) {
@@ -117,10 +117,8 @@ async function getQuote() {
     quoteEl.innerText = data.content;
     authorEl.innerText = data.author;
     // determine text length to either keep it or get a new one
-    const textSize = [...quoteEl.textContent];
-    console.log(quoteEl.textContent);
-    console.log(textSize.length);
-    if (textSize.length <= 100) {
+    console.log(quoteEl.textContent.length);
+    if (quoteEl.textContent.length <= 100) {
       complete();
       break;
     }
