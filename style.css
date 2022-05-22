@@ -1,0 +1,161 @@
+/************************ 
+      GENERAL
+ ************************/
+:root {
+  --bgColor: rgba(0, 0, 0, 0);
+  --txtColor: rgba(0, 0, 0);
+  --contWidth: 100rem;
+  --contHeight: 50rem;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bgColor);
+}
+
+/************************ 
+    QUOTE CONTAINER
+ ************************/
+.quote-container {
+  max-width: var(--contWidth);
+  max-height: 100%;
+  position: relative;
+  padding: 2.4rem;
+  visibility: hidden;
+}
+
+.quote-text {
+  margin-bottom: 1.2rem;
+}
+
+.quote-text span {
+  font-size: 4.4rem;
+  font-style: italic;
+  color: var(--txtColor);
+  font-weight: 700;
+  background-color: var(--bgColor);
+  padding: 0 0.8rem;
+}
+
+.quote-author {
+  margin-bottom: 6.4rem;
+}
+
+.quote-author span {
+  font-weight: 700;
+  font-size: 2.4rem;
+  color: var(--txtColor);
+  background-color: var(--bgColor);
+  padding: 0 0.8rem;
+}
+
+.bg-img--container {
+  z-index: -1;
+}
+
+.bg-img {
+  width: var(--contWidth);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 9px;
+  z-index: -1;
+}
+
+/************************ 
+      COMPONENTS
+ ************************/
+.twitter-button {
+  border: none;
+  background-color: var(--bgColor);
+  padding: 0.8rem;
+  border-radius: 50%;
+  margin-right: 2.4rem;
+}
+
+.twitter-icon {
+  font-size: 1.8rem;
+  color: var(--txtColor);
+}
+
+.btn-new-quote {
+  background-color: var(--bgColor);
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 1.4rem;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  color: var(--txtColor);
+}
+
+.loader {
+  position: absolute;
+  border: 0.8rem solid #f3f3f3;
+  border-top: 0.8rem solid #34dba9cb;
+  border-radius: 50%;
+  width: 12rem;
+  height: 12rem;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/************************ 
+      QUERIES
+ ************************/
+@media (max-width: 69em) {
+  :root {
+    --contWidth: 80rem;
+  }
+}
+
+@media (max-width: 52em) {
+  :root {
+    --contWidth: 60rem;
+  }
+}
+
+@media (max-width: 40em) {
+  html {
+    font-size: 56.25%;
+  }
+  :root {
+    --contWidth: 50rem;
+  }
+}
+
+@media (max-width: 34em) {
+  :root {
+    --contWidth: 45rem;
+  }
+}
+
+@media (max-width: 30em) {
+  :root {
+    --contWidth: 43rem;
+  }
+}
