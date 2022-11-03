@@ -6,7 +6,7 @@ I used [Lorem Picsum](https://picsum.photos/) to get a random background image, 
 
 
 https://daily-quote-app.netlify.app/
-## Screenshots
+## Screenshot
 
 ![App Screenshot](screenshot_demo.png)
 
